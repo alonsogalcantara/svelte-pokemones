@@ -8,8 +8,8 @@ module.exports = {
 		ecmaVersion: 2020
 	},
 	env: {
-		browser: true,
-		es2017: true,
+		browser: false,
+		es2017: false,
 		node: true
 	}
 };
