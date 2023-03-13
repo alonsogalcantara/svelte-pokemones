@@ -11,18 +11,18 @@ export async function pokemones(pokemon = "ditto") {
         FETCH_OPTIONS)
     const data = await response.json();
 
-    console.log({ data });
-
     const {
         name,
-        order,
+        forms,
         stats,
-        sprites
+        sprites,
+        types
     } = data;
 
     return {
         nombrePokemon: name,
-        order,
+        tipoPokemon: types,
+        forms,
         stats,
         sprites
     };
