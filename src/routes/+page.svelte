@@ -15,18 +15,31 @@
 </script>
 
 <div>
-	<select bind:value={pokemone.pokemonNombre} on:change={onChange} name="listPokemones">
-		<option value="" selected>Elige una opcion...</option>
-		<option value="ditto">Ditto</option>
-		<option value="mew">Mew</option>
-		<option value="pikachu">Pikachu</option>
-		<option value="eevee">Eevee</option>
-		<option value="umbreon ">Umbreon</option>
-		<option value="espeon">Espeon</option>
-		<option value="vaporeon">Vaporeon</option>
-		<option value="bulbasaur">Bulbasaur</option>
-		<option value="charmeleon">Charmeleon</option>
-	</select>
+	<div class="flex justify-center">
+		<div class="mb-3 xl:w-96">
+			<select
+				class="cursor-pointer"
+				bind:value={pokemone.pokemonNombre}
+				on:change={onChange}
+				name="listPokemones"
+				data-te-select-init
+			>
+				<option value="" selected>Elige una opcion...</option>
+				<option value="ditto">Ditto</option>
+				<option value="mew">Mew</option>
+				<option value="mewtwo">Mewtwo</option>
+				<option value="pikachu">Pikachu</option>
+				<option value="eevee">Eevee</option>
+				<option value="umbreon ">Umbreon</option>
+				<option value="espeon">Espeon</option>
+				<option value="vaporeon">Vaporeon</option>
+				<option value="bulbasaur">Bulbasaur</option>
+				<option value="charmeleon">Charmeleon</option>
+			</select>
+			    <!-- <label data-te-select-label-ref>Example label</label> -->
+
+		</div>
+	</div>
 
 	{#if onChangepokemonNombre === ''}
 		<h1>Elige un pokemon</h1>
